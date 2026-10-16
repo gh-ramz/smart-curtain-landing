@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Meet Smart Curtain: a concept exploring adaptive room lighting and reduced outside noise in one thoughtful window solution.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<title>Smart Curtain — A calmer kind of everyday / پرده هوشمند — آرامشی در خانه</title>
+<style>
+:root{--ink:#1d2b25;--muted:#64716a;--paper:#f5f3ec;--white:#fffef9;--green:#244d3d;--lime:#d8f078;--line:#dcded4;--serif:Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,-apple-system,sans-serif;--fa-sans:'Vazirmatn',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}
+html[lang="fa"] body { font-family: var(--fa-sans); }
+
+html[lang="fa"] h1, 
+html[lang="fa"] h2, 
+html[lang="fa"] h3,
+html[lang="fa"] .strip strong {
+  font-family: var(--fa-sans) !important;
+  font-weight: 800 !important;
+  letter-spacing: normal !important;
+}
+html[lang="fa"] h1 em {
+  font-style: normal;
+  color: #64836b;
+}
+
+a{color:inherit}button,input,select{font:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:23px 0;border-bottom:1px solid var(--line)}.brand{font-size:15px;font-weight:800;letter-spacing:-.04em;display:flex;align-items:center;gap:10px;text-decoration:none}.mark{width:28px;height:28px;border:1.5px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green);font-size:15px}.nav{display:flex;gap:20px;align-items:center;font-size:13px;color:var(--muted)}.nav a{text-decoration:none}.nav .navcta{background:var(--green);color:white;padding:10px 15px;border-radius:99px}
+.lang-btn{background:transparent;border:1px solid #b9c2b7;padding:7px 12px;border-radius:99px;cursor:pointer;font-size:12px;font-weight:700;color:var(--green);transition:all .2s}.lang-btn:hover{background:var(--green);color:white}
+.hero{padding:76px 0 72px;display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#54735e;display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';width:25px;height:1px;background:#54735e}
+html[lang="fa"] .eyebrow:before{display:none}
+.hero h1{font-family:var(--serif);font-weight:400;letter-spacing:-.055em;font-size:clamp(36px,4.5vw,62px);line-height:1.15;margin:21px 0 22px;max-width:610px}.hero h1 em{color:#64836b;font-weight:400}.lead{font-size:17px;color:var(--muted);max-width:470px;line-height:1.75}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:30px}.btn{border:0;border-radius:99px;padding:14px 20px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-size:13px;font-weight:750;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--green);color:white}.secondary{border:1px solid #b9c2b7;background:transparent}.note{font-size:11px;color:var(--muted);margin-top:20px}
+.visual{min-height:480px;position:relative;border-radius:190px 190px 24px 24px;background:#d9e0d0;overflow:hidden;display:flex;align-items:stretch;justify-content:center}.window-sky{position:absolute;inset:0 10% 0 10%;background:linear-gradient(180deg,#b9d2ce 0%,#e9e4d0 68%,#b6c3a7 100%);border-left:8px solid #f5f3ec;border-right:8px solid #f5f3ec}.sun{position:absolute;width:90px;height:90px;border-radius:50%;background:#f7e4a3;right:19%;top:15%;box-shadow:0 0 60px #f7e4a366}.city{position:absolute;bottom:0;left:10%;right:10%;height:42%;background:linear-gradient(180deg,transparent 0%,#8ca79a 1%,#789386 100%);clip-path:polygon(0 42%,10% 42%,10% 23%,19% 23%,19% 55%,29% 55%,29% 10%,40% 10%,40% 40%,49% 40%,49% 0,64% 0,64% 34%,73% 34%,73% 18%,83% 18%,83% 48%,100% 48%,100% 100%,0 100%)}.curtain{position:absolute;top:0;bottom:0;width:27%;background:repeating-linear-gradient(90deg,#f6f0df 0,#e7e0cf 8px,#faf6eb 17px,#d9d7c8 24px);box-shadow:inset -10px 0 18px #87958c22}.curtain.left{left:8%;clip-path:polygon(0 0,100% 0,86% 100%,0 100%)}.curtain.right{right:8%;clip-path:polygon(0 0,100% 0,100% 100%,14% 100%)}.visual-label{position:absolute;bottom:22px;left:22px;right:22px;display:flex;justify-content:space-between;align-items:center;gap:10px}.pill{background:#fffef0e8;border:1px solid #ffffffa8;border-radius:99px;padding:9px 13px;font-size:11px;font-weight:750;backdrop-filter:blur(8px)}.tiny-status{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#244d3de8;border-radius:99px;padding:10px 13px}
+.strip{background:var(--green);color:#f7f6ef;padding:21px 0}.stripinner{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.strip strong{font-family:var(--serif);font-size:19px;font-weight:400}.strip span{font-size:12px;color:#d2dbd1}
+.section{padding:88px 0}.sectionhead{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:34px}.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#64836b;font-weight:800}.section h2{font-family:var(--serif);font-weight:400;letter-spacing:-.045em;font-size:clamp(30px,3.5vw,44px);line-height:1.2;margin:12px 0 0;max-width:620px}.sectionhead p{max-width:350px;color:var(--muted);font-size:14px;margin:0}
+
+.painpoints{background:#eeefe7;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:50px 0}
+.paingrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.paincard{background:var(--white);padding:24px;border-radius:14px;border:1px solid var(--line)}
+.paincard h3{font-size:16px;margin:0 0 8px;color:var(--green)}
+.paincard p{font-size:13px;color:var(--muted);margin:0}
+
+.featuregrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feature{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px;min-height:255px;display:flex;flex-direction:column;justify-content:space-between}.featuretop{display:flex;justify-content:space-between;align-items:center}.iconbox{height:42px;width:42px;border-radius:50%;display:grid;place-items:center;background:#e8eddf;font-size:20px}.num{font-size:11px;color:#8b958b;letter-spacing:.1em}.feature h3{font-family:var(--serif);font-size:24px;font-weight:400;margin:25px 0 8px}.feature p{font-size:14px;color:var(--muted);margin:0}
+.concept{background:#e7e9de}.conceptrow{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:center}.conceptcopy p{color:var(--muted);max-width:420px}.steps{display:grid;gap:12px}.step{display:grid;grid-template-columns:42px 1fr;gap:15px;padding:18px 20px;border:1px solid #d1d7c9;border-radius:14px;background:#f5f5ee}.stepnum{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#d8e3d2;font-size:12px;font-weight:800}.step h3{font-size:14px;margin:0 0 3px}.step p{font-size:12px;color:var(--muted);margin:0}
+.usecases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.usecase{border-top:1px solid var(--line);padding:22px 10px 12px 0}.usecase .emoji{font-size:24px}.usecase h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:13px 0 7px}.usecase p{font-size:13px;color:var(--muted);margin:0}
+.honesty{background:#fffef9;border:1px solid var(--line);border-radius:18px;padding:26px 30px;display:grid;grid-template-columns:44px 1fr;gap:16px;margin-top:35px}.honestyicon{width:40px;height:40px;border-radius:50%;background:#f3e9cb;display:grid;place-items:center;font-weight:bold}.honesty h3{margin:0 0 7px;font-size:15px}.honesty p{margin:0;color:var(--muted);font-size:13px}
+.faq{border-top:1px solid var(--line);margin-top:35px}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq summary{cursor:pointer;font-weight:700;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:15px}.faq summary:after{content:'+';font-size:20px;font-weight:400;color:#64836b}.faq details[open] summary:after{content:'−'}.faq details p{max-width:760px;color:var(--muted);font-size:13px;margin:12px 0 0}
+.signup{background:var(--lime);padding:72px 0}.signupinner{display:grid;grid-template-columns:1fr .8fr;gap:55px;align-items:center}.signup h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.2;letter-spacing:-.03em;margin:13px 0}.signup p{font-size:14px;max-width:440px;color:#46533e}
+.form{background:#f8f8ee;border-radius:16px;padding:22px;display:grid;gap:11px}.form label{font-size:12px;font-weight:750}.form input,.form select{width:100%;border:1px solid #d3d9c9;border-radius:9px;background:#fffef9;padding:13px 14px;outline:none}.form input:focus,.form select:focus{border-color:var(--green);box-shadow:0 0 0 3px #244d3d18}.form .btn{width:100%;margin-top:4px}.form small{font-size:10px;color:var(--muted)}
+.success{display:none;padding:14px;background:#e6f1d6;border-radius:10px;font-size:13px}
+.footer{background:#1d352b;color:#f6f5ed;padding:28px 0}.footerinner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer p{font-size:11px;color:#c5d0c5;margin:5px 0 0}.footerlinks{font-size:11px;color:#d7e0d6}
+.concepttag{display:inline-flex;align-items:center;gap:7px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;border:1px solid #b8c7b4;border-radius:99px;padding:7px 10px;color:#4c6854;margin-top:16px}.concepttag:before{content:'';height:6px;width:6px;background:#7a9d6b;border-radius:50%}
+
+[data-lang="fa"] { display: none; }
+html[lang="fa"] [data-lang="en"] { display: none; }
+html[lang="fa"] [data-lang="fa"] { display: block; }
+html[lang="fa"] body { direction: rtl; text-align: right; }
+
+@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.nav a:not(.navcta):not(.lang-btn){display:none}.hero{grid-template-columns:1fr;gap:35px;padding:55px 0}.hero h1{font-size:36px}.visual{min-height:400px}.section{padding:64px 0}.sectionhead{display:block}.sectionhead p{margin-top:18px}.featuregrid,.conceptrow,.signupinner,.paingrid{grid-template-columns:1fr}.conceptrow{gap:28px}.usecases{grid-template-columns:1fr}.usecase{display:grid;grid-template-columns:38px 1fr;column-gap:12px}.usecase .emoji{grid-row:span 2}.usecase h3{margin:0 0 5px}.signupinner{gap:28px}.stripinner{align-items:flex-start;flex-direction:column;gap:6px}.honesty{padding:20px;grid-template-columns:35px 1fr}.honestyicon{width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <a class="brand" href="#top" aria-label="Smart Curtain home"><span class="mark">S</span> <span data-lang="en">smart curtain</span><span data-lang="fa">پرده هوشمند</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#features"><span data-lang="en">The idea</span><span data-lang="fa">ایده ما</span></a>
+    <a href="#spaces"><span data-lang="en">For your space</span><span data-lang="fa">کاربردها</span></a>
+    <a href="#faq"><span data-lang="en">FAQs</span><span data-lang="fa">سوالات متداول</span></a>
+    <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">FA / EN</button>
+    <a class="navcta" href="#updates"><span data-lang="en">Get updates ↗</span><span data-lang="fa">ثبت‌نام اولیه ↗</span></a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <div class="eyebrow"><span data-lang="en">A new idea for everyday living</span><span data-lang="fa">روشی نوین برای زندگی روزمره</span></div>
+    <h1><span data-lang="en">A little more <em>calm.</em><br>A little more in control.</span><span data-lang="fa">کمی بیشتر <em>آرامش.</em><br>کمی بیشتر کنترل روی محیط.</span></h1>
+    <p class="lead"><span data-lang="en">Meet Smart Curtain — a concept combining adaptive room lighting and outside-noise reduction into one thoughtful window solution.</span><span data-lang="fa">با پرده هوشمند آشنا شوید؛ مفهومی که تنظیم نور محیط و کاهش صدای مزاحم بیرون را در یک پنجره واحد ترکیب کرده است.</span></p>
+    <div class="actions">
+      <a class="btn primary" href="#features"><span data-lang="en">Explore the idea <span>↘</span></span><span data-lang="fa">بررسی ایده <span>↘</span></span></a>
+      <a class="btn secondary" href="#updates"><span data-lang="en">Follow its journey</span><span data-lang="fa">دنبال کردن روند توسعه</span></a>
+    </div>
+    <div class="note"><span data-lang="en">An early-stage product concept · Not yet available to buy</span><span data-lang="fa">یک ایده اولیه محصول · هنوز برای خرید موجود نیست</span></div>
+  </div>
+  <div class="visual" role="img" aria-label="Concept illustration">
+    <div class="window-sky"></div><div class="sun"></div><div class="city"></div>
+    <div class="curtain left"></div><div class="curtain right"></div>
+    <div class="visual-label"><span class="pill"><span data-lang="en">Light, considered.</span><span data-lang="fa">نور، هوشمندانه.</span></span><span class="tiny-status"><span data-lang="en">Quiet by design*</span><span data-lang="fa">آرامش در طراحی*</span></span></div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap stripinner">
+    <strong><span data-lang="en">One window. Two everyday needs.</span><span data-lang="fa">یک پنجره. دو نیاز اساسی روزمره.</span></strong>
+    <span><span data-lang="en">*Designed to explore noise reduction — real-world performance is not yet verified.</span><span data-lang="fa">*طراحی شده برای کاهش سر و صدا — عملکرد واقعی هنوز آزمایش نشده است.</span></span>
+  </div>
+</div>
+
+<section class="painpoints">
+  <div class="wrap paingrid">
+    <div>
+      <div class="kicker"><span data-lang="en">The Problem</span><span data-lang="fa">مسئله‌ی واقعی</span></div>
+      <h2><span data-lang="en">Does your room work against your focus?</span><span data-lang="fa">آیا محیط خانه تمرکز شما را بر هم می‌زند؟</span></h2>
+    </div>
+    <div style="display:grid; gap:14px;">
+      <article class="paincard">
+        <h3><span data-lang="en">Harsh light & glare</span><span data-lang="fa">نور خیره‌کننده و نامناسب</span></h3>
+        <p><span data-lang="en">Working or reading by a window often means dealing with shifting daylight, screen glare, or poor lighting for the moment.</span><span data-lang="fa">کار یا مطالعه کنار پنجره معمولاً با تغییرات آزاردهنده‌ی نور خورشید و خیرگی صفحه نمایش همراه است.</span></p>
+      </article>
+      <article class="paincard">
+        <h3><span data-lang="en">Constant city noise</span><span data-lang="fa">سر و صدای مداوم خیابان</span></h3>
+        <p><span data-lang="en">Apartment living brings street sound, traffic, and chatter right to your glass, making it hard to unwind or focus.</span><span data-lang="fa">زندگی آپارتمانی صدای ماشین‌ها و شهر را به داخل می‌آورد که استراحت و تمرکز را سخت می‌کند.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="features">
+  <div class="sectionhead">
+    <div>
+      <div class="kicker"><span data-lang="en">The idea</span><span data-lang="fa">ایده اصلی</span></div>
+      <h2><span data-lang="en">Make your space feel more like yours.</span><span data-lang="fa">فضای خود را واقعی‌تر و راحت‌تر کنید.</span></h2>
+    </div>
+    <p><span data-lang="en">Smart Curtain brings two complementary goals together in one window-covering concept. The details are still being explored.</span><span data-lang="fa">پرده هوشمند دو هدف مکمل را در قالب یک محصول پنجره ترکیب می‌کند. جزئیات فنی همچنان در حال بررسی است.</span></p>
+  </div>
+  <div class="featuregrid">
+    <article class="feature">
+      <div class="featuretop"><span class="iconbox">☼</span><span class="num">01 / <span data-lang="en">LIGHT</span><span data-lang="fa">نور</span></span></div>
+      <div>
+        <h3><span data-lang="en">Light for the moment.</span><span data-lang="fa">نور متناسب با هر لحظه.</span></h3>
+        <p><span data-lang="en">Imagine a room whose light can be adjusted around everyday activities — from focused work and reading to winding down for sleep. The exact sensing and lighting method is still to be confirmed.</span><span data-lang="fa">اتاقی را تصور کنید که نور آن با فعالیت‌های روزمره شما — از کار متمرکز و مطالعه تا استراحت و خواب — هماهنگ می‌شود. روش دقیق حسگری و تامین نور هنوز تایید نشده است.</span></p>
+      </div>
+    </article>
+    <article class="feature">
+      <div class="featuretop"><span class="iconbox">≈</span><span class="num">02 / <span data-lang="en">SOUND</span><span data-lang="fa">صدا</span></span></div>
+      <div>
+        <h3><span data-lang="en">Less of the outside.</span><span data-lang="fa">کاهش سر و صدای بیرون.</span></h3>
+        <p><span data-lang="en">Designed with the aim of reducing some outside noise, helping create a calmer-feeling interior. It is not intended to eliminate all sound or replace proper acoustic insulation.</span><span data-lang="fa">طراحی شده با هدف کاهش بخشی از صدای محیط بیرون برای ایجاد فضایی آرام‌تر در داخل. این محصول برای حذف کامل صدا یا جایگزینی عایق صوتی کامل نیست.</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section concept">
+  <div class="wrap conceptrow">
+    <div class="conceptcopy">
+      <div class="kicker"><span data-lang="en">A concept in progress</span><span data-lang="fa">یک ایده در حال توسعه</span></div>
+      <h2><span data-lang="en">Designed around the rhythm of home.</span><span data-lang="fa">طراحی شده هماهنگ با ریتم خانه.</span></h2>
+      <p><span data-lang="en">Morning light, a workday at the window, a quiet reading break. The idea is simple: bring light management and outside-noise reduction into one considered product.</span><span data-lang="fa">نور صبحگاهی، روز کاری کنار پنجره، یا وقت استراحت و مطالعه. ایده ساده است: مدیریت نور و کاهش صدای بیرون در یک محصول واحد.</span></p>
+      <span class="concepttag"><span data-lang="en">Early concept · Details evolving</span><span data-lang="fa">کنسپت اولیه · جزئیات در حال تکامل</span></span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="stepnum">01</div>
+        <div>
+          <h3><span data-lang="en">Choose the moment</span><span data-lang="fa">انتخاب لحظه و حالت</span></h3>
+          <p><span data-lang="en">Work, read, relax or sleep — activities the concept is intended to support.</span><span data-lang="fa">کار، مطالعه، استراحت یا خواب — فعالیت‌هایی که ایده برای پشتیبانی از آن‌ها طراحی شده.</span></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="stepnum">02</div>
+        <div>
+          <h3><span data-lang="en">Explore a better light setting</span><span data-lang="fa">تنظیم بهتر نور محیط</span></h3>
+          <p><span data-lang="en">The way settings are selected or automated has not yet been established.</span><span data-lang="fa">نحوه انتخاب تنظیمات یا اتوماسیون آن هنوز نهایی نشده است.</span></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="stepnum">03</div>
+        <div>
+          <h3><span data-lang="en">Feel more at ease at home</span><span data-lang="fa">احساس آرامش بیشتر در خانه</span></h3>
+          <p><span data-lang="en">Noise reduction is a design goal; the amount of reduction still needs testing.</span><span data-lang="fa">کاهش سر و صدا یک هدف طراحی است؛ میزان کاهش هنوز نیازمند تست‌های آزمایشگاهی است.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="spaces">
+  <div class="sectionhead">
+    <div>
+      <div class="kicker"><span data-lang="en">Made for real-life routines</span><span data-lang="fa">متناسب با روال زندگی واقعی</span></div>
+      <h2><span data-lang="en">Where could it belong?</span><span data-lang="fa">کجا می‌تواند کاربرد داشته باشد؟</span></h2>
+    </div>
+    <p><span data-lang="en">These are potential use cases, not yet validated performance claims.</span><span data-lang="fa">این موارد کاربردهای احتمالی هستند و ادعای عملکرد قطعی محسوب نمی‌شوند.</span></p>
+  </div>
+  <div class="usecases">
+    <article class="usecase">
+      <span class="emoji">☾</span>
+      <h3><span data-lang="en">The bedroom</span><span data-lang="fa">اتاق خواب</span></h3>
+      <p><span data-lang="en">For people who want to manage incoming daylight and explore ways to soften outside noise while winding down.</span><span data-lang="fa">برای کسانی که می‌خواهند هنگام استراحت نور روز را مدیریت کرده و صدای بیرون را کاهش دهند.</span></p>
+    </article>
+    <article class="usecase">
+      <span class="emoji">⌘</span>
+      <h3><span data-lang="en">The home office</span><span data-lang="fa">دفتر کار خانگی</span></h3>
+      <p><span data-lang="en">For work-from-home routines where changing daylight and street noise can be distractions.</span><span data-lang="fa">برای دورکارها که تغییرات نور روز و صدای خیابان می‌تواند حواس‌پرتی ایجاد کند.</span></p>
+    </article>
+    <article class="usecase">
+      <span class="emoji">▤</span>
+      <h3><span data-lang="en">The reading nook</span><span data-lang="fa">اتاق مطالعه</span></h3>
+      <p><span data-lang="en">For a corner dedicated to reading, studying or taking a quieter pause in the day.</span><span data-lang="fa">برای گوشه‌ای دنج جهت مطالعه، یادگیری یا استراحتی آرام در طول روز.</span></p>
+    </article>
+  </div>
+  <div class="honesty">
+    <div class="honestyicon">i</div>
+    <div>
+      <h3><span data-lang="en">What we know — and what we're still learning</span><span data-lang="fa">آنچه می‌دانیم — و آنچه همچنان در حال بررسی آن هستیم</span></h3>
+      <p><span data-lang="en">Smart Curtain is currently a product concept. A prototype, tested noise-reduction figures, exact lighting mechanism, sensors, power requirements and installation specifications have not been confirmed. Results will depend on the eventual design and the room it is installed in.</span><span data-lang="fa">پرده هوشمند در حال حاضر یک کنسپت محصول است. نمونه اولیه، ارقام تاییدشده کاهش صدا، مکانیسم دقیق نوری، حسگرها، نیازمندی‌های برق و مشخصات نصب هنوز تایید قطعی نشده‌اند. نتایج به طراحی نهایی و محیط نصب بستگی دارد.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="faq">
+  <div class="kicker"><span data-lang="en">Good questions</span><span data-lang="fa">پرسش‌های مهم</span></div>
+  <h2><span data-lang="en">Before you picture it at home.</span><span data-lang="fa">پیش از تصور آن در خانه خود.</span></h2>
+  <div class="faq">
+    <details>
+      <summary><span data-lang="en">Does it completely block outside noise?</span><span data-lang="fa">آیا صدای بیرون را کاملاً مسدود می‌کند؟</span></summary>
+      <p><span data-lang="en">No such claim can be made. The concept aims to reduce some outside noise, but no verified test results are available. Sound may still enter through glass, frames, gaps, walls or other paths.</span><span data-lang="fa">چنین ادعایی وجود ندارد. هدف ایده کاهش بخشی از سر و صدای بیرون است، اما نتیجه آزمایش‌گرفته‌شده و قطعی در دست نیست. صدا ممکن است همچنان از پنجره، درزها یا دیوارها وارد شود.</span></p>
+    </details>
+    <details>
+      <summary><span data-lang="en">Does the curtain produce its own light?</span><span data-lang="fa">آیا پرده خودش نور تولید می‌کند؟</span></summary>
+      <p><span data-lang="en">That has not been confirmed. Adjusting incoming daylight and producing artificial light are different functions, and the current concept does not establish whether an internal light source is included.</span><span data-lang="fa">این مورد تایید نشده است. تنظیم نور ورودی خورشید و تولید نور مصنوعی دو عملکرد متفاوت هستند و در نسخه فعلی مشخص نیست که منبع نوری داخلی وجود دارد یا خیر.</span></p>
+    </details>
+    <details>
+      <summary><span data-lang="en">Does it detect what I'm doing automatically?</span><span data-lang="fa">آیا فعالیت مرا به‌طور خودکار تشخیص می‌دهد؟</span></summary>
+      <p><span data-lang="en">The concept is intended to support activities such as working, reading, relaxing and sleeping. The method — manual mode selection, environmental sensors or automatic activity recognition — has not yet been established.</span><span data-lang="fa">این ایده برای پشتیبانی از کار، مطالعه، استراحت و خواب طراحی شده است. روش اجرا — انتخاب دستی حالت، حسگرهای محیطی یا تشخیص خودکار — هنوز تعیین نشده است.</span></p>
+    </details>
+    <details>
+      <summary><span data-lang="en">Will it work with my window?</span><span data-lang="fa">آیا روی پنجره من قابل نصب است؟</span></summary>
+      <p><span data-lang="en">Compatibility, dimensions, mounting hardware and weight requirements have not yet been specified. Installation suitability would need to be confirmed once the product design is finalized.</span><span data-lang="fa">سازگاری، ابعاد، تجهیزات اتصال و الزامات وزنی هنوز مشخص نشده‌اند. مناسب بودن نصب پس از نهایی شدن طراحی محصول مشخص خواهد شد.</span></p>
+    </details>
+    <details>
+      <summary><span data-lang="en">Can I buy it now?</span><span data-lang="fa">آیا هم‌اکنون می‌توانم آن را خریداری کنم؟</span></summary>
+      <p><span data-lang="en">Not yet. This page introduces an early-stage concept and invites people to follow its development. It does not offer a product for sale.</span><span data-lang="fa">خیر هنوز. این صفحه یک ایده اولیه را معرفی می‌کند و از افراد دعوت می‌کند روند توسعه‌اش را دنبال کنند و محصولی برای فروش عرضه نشده است.</span></p>
+    </details>
+  </div>
+</section>
+
+<section class="signup" id="updates">
+  <div class="wrap signupinner">
+    <div>
+      <div class="kicker"><span data-lang="en">Stay in the loop & Help us learn</span><span data-lang="fa">همکاری در فرضیه محصول</span></div>
+      <h2><span data-lang="en">Which feature matters most to you?</span><span data-lang="fa">کدام ویژگی برای شما اهمیت بیشتری دارد؟</span></h2>
+      <p><span data-lang="en">Register your interest and help us validate what matters most in a calmer home environment.</span><span data-lang="fa">با ثبت علاقه مندی و انتخاب ویژگی مدنظرتان، به ما کمک کنید اولویت‌های واقعی بازار را بهتر بشناسیم.</span></p>
+    </div>
+    <form class="form" id="interestForm">
+      <label for="priority"><span data-lang="en">Most important feature</span><span data-lang="fa">اولویت اصلی شما</span></label>
+      <select id="priority" name="priority">
+        <option value="both" selected id="opt-both">Both equally important / هر دو به یک اندازه</option>
+        <option value="light" id="opt-light">Adaptive Light Management / مدیریت هوشمند نور</option>
+        <option value="sound" id="opt-sound">Outside Noise Reduction / کاهش سر و صدای بیرون</option>
+      </select>
+
+      <label for="email"><span data-lang="en">Your email address</span><span data-lang="fa">آدرس ایمیل شما</span></label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+
+      <button class="btn primary" type="submit"><span data-lang="en">Register interest ↗</span><span data-lang="fa">ثبت پاسخ و علاقه‌مندی ↗</span></button>
+      <div class="success" id="success" role="status"><span data-lang="en">Thanks — your response & email have been noted in this demo.</span><span data-lang="fa">متشکریم — پاسخ و ایمیل شما در این نسخه دمو ثبت شد.</span></div>
+      <small><span data-lang="en">Prototype only: this form does not store data on a server.</span><span data-lang="fa">فقط نمونه اولیه: این فرم اطلاعات را روی سرور ذخیره نمی‌کند.</span></small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footerinner">
+    <div>
+      <div class="brand"><span class="mark" style="border-color:#b9d0b6;color:#d8f078">S</span> <span data-lang="en">smart curtain</span><span data-lang="fa">پرده هوشمند</span></div>
+      <p><span data-lang="en">A concept for more considered everyday spaces.</span><span data-lang="fa">یک ایده برای فضاهای زندگی هوشمندانه‌تر.</span></p>
+    </div>
+    <div class="footerlinks"><span data-lang="en">Concept presentation · Validation MVP</span><span data-lang="fa">ارائه ایده · نسخه MVP اعتبارسنجی</span></div>
+  </div>
+</footer>
+
+<script>
+function toggleLanguage() {
+  const html = document.documentElement;
+  const currentLang = html.getAttribute('lang');
+  
+  const optBoth = document.getElementById('opt-both');
+  const optLight = document.getElementById('opt-light');
+  const optSound = document.getElementById('opt-sound');
+
+  if (currentLang === 'fa') {
+    html.setAttribute('lang', 'en');
+    html.setAttribute('dir', 'ltr');
+    document.getElementById('langToggle').textContent = 'FA / EN';
+    
+    if(optBoth) optBoth.textContent = 'Both equally important';
+    if(optLight) optLight.textContent = 'Adaptive Light Management';
+    if(optSound) optSound.textContent = 'Outside Noise Reduction';
+  } else {
+    html.setAttribute('lang', 'fa');
+    html.setAttribute('dir', 'rtl');
+    document.getElementById('langToggle').textContent = 'EN / FA';
+    
+    if(optBoth) optBoth.textContent = 'هر دو به یک اندازه';
+    if(optLight) optLight.textContent = 'مدیریت هوشمند نور';
+    if(optSound) optSound.textContent = 'کاهش سر و صدای بیرون';
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const currentLang = document.documentElement.getAttribute('lang');
+  const optBoth = document.getElementById('opt-both');
+  const optLight = document.getElementById('opt-light');
+  const optSound = document.getElementById('opt-sound');
+  
+  if (currentLang === 'fa') {
+    if(optBoth) optBoth.textContent = 'هر دو به یک اندازه';
+    if(optLight) optLight.textContent = 'مدیریت هوشمند نور';
+    if(optSound) optSound.textContent = 'کاهش سر و صدای بیرون';
+  } else {
+    if(optBoth) optBoth.textContent = 'Both equally important';
+    if(optLight) optLight.textContent = 'Adaptive Light Management';
+    if(optSound) optSound.textContent = 'Outside Noise Reduction';
+  }
+});
+
+document.getElementById('interestForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!this.reportValidity()) return;
+  document.getElementById('success').style.display = 'block';
+  const btn = this.querySelector('button');
+  const currentLang = document.documentElement.getAttribute('lang');
+  btn.textContent = currentLang === 'fa' ? 'ثبت شد ✓' : 'Interest noted ✓';
+  btn.disabled = true;
+});
+</script>
+</body>
+</html>
